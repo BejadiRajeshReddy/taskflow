@@ -14,7 +14,9 @@ app = FastAPI(title="Task Management API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://task-flow-mu-silk.vercel.app"
+        "https://task-flow-s.vercel.app",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173"
     ],
     allow_credentials=True,
     allow_methods=["*"],
