@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { LayoutDashboard, CheckSquare, FolderKanban, Calendar, Activity, Settings, Plus, Layout, ShieldAlert } from 'lucide-react';
 import { Button } from './Button';
 import { useContext } from 'react';
@@ -6,6 +6,8 @@ import { AuthContext } from '../context/AuthContext';
 
 export default function Sidebar({ isOpen, setIsOpen }) {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     { name: 'Overview', path: '/dashboard', icon: <LayoutDashboard size={18} /> },
@@ -26,8 +28,8 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       {/* Sidebar container */}
       <div className={`
         fixed lg:static inset-y-0 left-0 z-50 w-64 bg-zinc-50 dark:bg-zinc-950 border-r border-zinc-200 dark:border-zinc-800 
-        transform transition-transform duration-300 ease-in-out lg:tranzinc-x-0 flex flex-col
-        ${isOpen ? 'tranzinc-x-0' : '-tranzinc-x-full'}
+        transform transition-transform duration-300 ease-in-out lg:translate-x-0 flex flex-col
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         
         {/* Workspace Identity */}
@@ -48,7 +50,11 @@ export default function Sidebar({ isOpen, setIsOpen }) {
             onClick={(e) => {
               e.preventDefault();
               setIsOpen(false);
-              window.dispatchEvent(new CustomEvent('open-new-project-modal'));
+              if (location.pathname === '/projects') {
+                window.dispatchEvent(new CustomEvent('open-new-project-modal'));
+              } else {
+                navigate('/projects', { state: { openNewProjectModal: true } });
+              }
             }}
           >
             <Plus size={16} className="text-blue-600 dark:text-blue-400" /> Create Project

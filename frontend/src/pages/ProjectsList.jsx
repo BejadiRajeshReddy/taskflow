@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import api from '../api/client';
 import { Button } from '../components/Button';
 import { Modal } from '../components/Modal';
@@ -11,6 +11,17 @@ export default function ProjectsList() {
   const [loading, setLoading] = useState(true);
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const [projectForm, setProjectForm] = useState({ name: '', description: '' });
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.state?.openNewProjectModal) {
+      setIsProjectModalOpen(true);
+      // Clean up state so refresh doesn't reopen modal
+      navigate('/projects', { replace: true, state: {} });
+    }
+  }, [location.state, navigate]);
 
   useEffect(() => {
     const fetchProjects = async () => {

@@ -135,7 +135,7 @@ export default function Dashboard() {
                   
                   <div className="mt-auto pt-4 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400">
                     <span className="flex items-center gap-1.5"><LayoutDashboard size={14} /> {p.task_count} Tasks</span>
-                    <span className="flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:tranzinc-x-1 transition-transform">
+                    <span className="flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:translate-x-1 transition-transform">
                       Open <ArrowRight size={14} className="ml-1" />
                     </span>
                   </div>

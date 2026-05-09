@@ -15,7 +15,6 @@
 @layer base {
   html, body {
     @apply bg-[var(--color-background)] text-zinc-800 transition-colors duration-200 font-sans;
-    overflow: hidden;
   }
   
   .dark html, .dark body {

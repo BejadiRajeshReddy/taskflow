@@ -40,19 +40,19 @@ export default function Landing() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 w-full">
             {user ? (
               <Link to="/dashboard" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto gap-3 text-lg px-10 py-7 rounded-2xl shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white transition-all duration-300 hover:-tranzinc-y-1">
+                <Button size="lg" className="w-full sm:w-auto gap-3 text-lg px-10 py-7 rounded-2xl shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white transition-all duration-300 hover:-translate-y-1">
                   Enter Workspace <ArrowRight size={22} />
                 </Button>
               </Link>
             ) : (
               <>
                 <Link to="/register" className="w-full sm:w-auto">
-                  <Button size="lg" className="w-full sm:w-auto gap-3 text-lg px-10 py-7 rounded-2xl shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white transition-all duration-300 hover:-tranzinc-y-1">
+                  <Button size="lg" className="w-full sm:w-auto gap-3 text-lg px-10 py-7 rounded-2xl shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white transition-all duration-300 hover:-translate-y-1">
                     Start for free <ArrowRight size={22} />
                   </Button>
                 </Link>
                 <Link to="/login" className="w-full sm:w-auto">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-10 py-7 rounded-2xl bg-white/70 dark:bg-zinc-800/70 backdrop-blur-md border-zinc-200 dark:border-zinc-700 hover:bg-white dark:hover:bg-zinc-800 text-zinc-800 dark:text-white transition-all duration-300 hover:-tranzinc-y-1">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-10 py-7 rounded-2xl bg-white/70 dark:bg-zinc-800/70 backdrop-blur-md border-zinc-200 dark:border-zinc-700 hover:bg-white dark:hover:bg-zinc-800 text-zinc-800 dark:text-white transition-all duration-300 hover:-translate-y-1">
                     Sign In
                   </Button>
                 </Link>
@@ -74,7 +74,7 @@ export default function Landing() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {/* Feature 1 */}
-            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5 transition-all duration-500 hover:-tranzinc-y-2 relative overflow-hidden">
+            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/5 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-100 to-transparent dark:from-blue-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[100px]"></div>
               <div className="bg-blue-100 dark:bg-blue-900/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 text-blue-600 dark:text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                 <LayoutDashboard size={32} />
@@ -86,7 +86,7 @@ export default function Landing() {
             </div>
 
             {/* Feature 2 */}
-            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-indigo-500/10 dark:hover:shadow-indigo-500/5 transition-all duration-500 hover:-tranzinc-y-2 relative overflow-hidden">
+            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-indigo-500/10 dark:hover:shadow-indigo-500/5 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-indigo-100 to-transparent dark:from-indigo-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[100px]"></div>
               <div className="bg-indigo-100 dark:bg-indigo-900/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 text-indigo-600 dark:text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
                 <Users size={32} />
@@ -98,7 +98,7 @@ export default function Landing() {
             </div>
 
             {/* Feature 3 */}
-            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-violet-500/10 dark:hover:shadow-violet-500/5 transition-all duration-500 hover:-tranzinc-y-2 relative overflow-hidden">
+            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-violet-500/10 dark:hover:shadow-violet-500/5 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-violet-100 to-transparent dark:from-violet-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[100px]"></div>
               <div className="bg-violet-100 dark:bg-violet-900/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 text-violet-600 dark:text-violet-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                 <ShieldCheck size={32} />
@@ -110,7 +110,7 @@ export default function Landing() {
             </div>
 
             {/* Feature 4 */}
-            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/5 transition-all duration-500 hover:-tranzinc-y-2 relative overflow-hidden lg:col-span-3">
+            <div className="group bg-white dark:bg-zinc-900 p-10 rounded-[2rem] border border-zinc-200 dark:border-zinc-800 text-left hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-emerald-500/5 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden lg:col-span-3">
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-emerald-100 to-transparent dark:from-emerald-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-tr-[200px]"></div>
               <div className="flex flex-col md:flex-row items-center gap-10">
                 <div className="flex-1">
