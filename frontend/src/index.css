@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  --color-primary: #2563eb; /* Clean blue */
+  --color-primary-hover: #1d4ed8;
+  --color-surface: #ffffff;
+  --color-surface-dark: #18181b; /* Refined dark neutral */
+  --color-background: #f9fafb; /* Very soft gray */
+  --color-background-dark: #09090b; /* Deep dark */
+}
+
+@layer base {
+  html, body {
+    @apply bg-[var(--color-background)] text-zinc-800 transition-colors duration-200 font-sans;
+    overflow: hidden;
+  }
+  
+  .dark html, .dark body {
+    @apply bg-[var(--color-background-dark)] text-zinc-200;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 dark:bg-zinc-600 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-400 dark:bg-zinc-500;
+}
