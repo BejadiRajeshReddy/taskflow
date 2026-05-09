@@ -95,15 +95,15 @@ export default function Navbar({ setIsSidebarOpen }) {
       <div className="h-full px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         
         {/* Left section: Mobile menu toggle & Search */}
-        <div className="flex items-center gap-4 flex-1">
+        <div className="flex items-center gap-2 sm:gap-4 flex-1 mr-2 sm:mr-0">
           <button 
             onClick={() => setIsSidebarOpen(true)}
-            className="lg:hidden p-2 -ml-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+            className="lg:hidden p-2 -ml-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white shrink-0"
           >
             <Menu size={20} />
           </button>
           
-          <div className="hidden sm:flex flex-col max-w-md w-full relative" ref={searchRef}>
+          <div className="flex flex-col max-w-md w-full relative" ref={searchRef}>
             <div className="relative w-full">
               <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
               <input 
